@@ -11,7 +11,7 @@ module.exports = {
         ],
     },
     output: {
-        filename: mode === 'production' ? "bundle.[contenthash:8].js" : "bundle.js",
+        filename: mode === 'production' ? "[name].[contenthash:8].js" : "[name].js",
         path: path.resolve(__dirname, "public"),
         publicPath: "/",
         clean: true,
@@ -44,16 +44,7 @@ module.exports = {
     },
     optimization: {
         minimize: mode === 'production',
-        splitChunks: {
-            chunks: 'all',
-            cacheGroups: {
-                vendors: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all',
-                },
-            },
-        },
+        splitChunks: false,
     },
     performance: {
         hints: mode === 'production' ? 'warning' : false,
