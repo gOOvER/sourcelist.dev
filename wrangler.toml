@@ -1,14 +1,14 @@
 # Cloudflare Pages Deployment
 
-name = "sourcelist-dev"
-compatibility_date = "2025-11-03"
+name = "sourcelistdev"
+compatibility_date = "2025-11-04"
 
 [build]
 command = "npm run build"
 publish = "public"
 
 [build.environment]
-NODE_VERSION = "18"
+NODE_VERSION = "24"
 
 # Redirects for SPA (Single Page Application)
 [[redirects]]
