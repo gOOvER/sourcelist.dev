@@ -68,4 +68,4 @@ jspm_packages/
 
 # Temporary folders
 tmp/
-temp/
+temp/\n# Backup files\n*.bak
