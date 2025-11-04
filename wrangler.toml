@@ -3,9 +3,12 @@
 name = "sourcelistdev"
 compatibility_date = "2025-11-04"
 
+# Static site configuration for Pages
+[assets]
+directory = "./public"
+
 [build]
 command = "npm run build"
-publish = "public"
 
 [build.environment]
 NODE_VERSION = "24"
